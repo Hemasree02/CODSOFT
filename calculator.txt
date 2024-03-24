@@ -1,0 +1,26 @@
+def calculator(x,y,op):
+    if(op=='+'):
+        print("Result:",x+y)
+    elif(op=='-'):
+        print("Result:",x-y)
+    elif(op=='*'):
+        print("Result:",x*y)
+    elif(op=='/'):
+        if y==0:
+            print("Error")
+            return None
+        else:
+            print("Result:",x/y)
+    elif(op=='%'):
+        print("Result:",x%y)
+    elif(op=='**'):
+        print("Result:",x**y)
+    elif(op=='//'):
+        print("Result:",x//y)
+    else:
+        print("Invalid operator")
+        return None
+x=int(input("Enter the 1st number:"))
+y=int(input("Enter the 2nd number:"))
+op=input("Enter the operator:")
+calculator(x,y,op)
