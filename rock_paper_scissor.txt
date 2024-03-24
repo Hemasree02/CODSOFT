@@ -1,0 +1,21 @@
+import random
+s=True
+while(s):
+    c,u=0,0
+    ui=input("Enter the user input:")
+    li=["rock","paper","scissor"]
+    ci=random.choice(li)
+    print("Computer input:",ci)
+    if (ui=='rock' and ci=='paper') or (ui=="paper" and ci=="scissor") or (ui=="scissor" and ci=="rock"):
+        c=c+1
+        print("Computer wins")
+    elif (ui=="rock"and ci=="scissor") or (ui=="paper" and ci=="rock") or (ui=="scissor" and ci=="paper"):
+        print("user wins")
+        u=u+1
+    else:
+        print("tie")
+    res=input("Do you need to play again, then say yes or no:")
+    if res!="yes":
+        s=False
+print("user score=",u)
+print("computer score=",c)
